@@ -4,12 +4,7 @@ spring:
       enabled: true
 
   mongodb:
-    host: localhost
-    port: 13500
-    database: eca
-    username: root
-    password: mongodb
-    authentication-database: admin
+    uri: mongodb://root:wDbcVMMxovhTG5096NrYwippwrA-wf-bezZQKVzy6r53MNYf@ec7ce666-7a9b-473d-8306-168d27dad589.asia-southeast1.firestore.goog:443/db-eca?loadBalanced=true&tls=true&authMechanism=SCRAM-SHA-256&retryWrites=false
 
 server:
   port: 0
@@ -17,8 +12,3 @@ server:
 eureka:
   instance:
     instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
-
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.application.name}:${random.value}
